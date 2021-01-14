@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -11,12 +14,17 @@ android {
 
     defaultConfig {
         applicationId "com.appcent.nasashowcase"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+        enabledForTests = true
     }
 
     buildTypes {
@@ -47,11 +55,32 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
-    implementation 'com.google.dagger:hilt-android:2.28-alpha'
-    kapt 'com.google.dagger:hilt-android-compiler:2.28-alpha'
     implementation "com.jakewharton.timber:timber:4.7.1"
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation "androidx.room:room-runtime:2.2.6"
+    kapt "androidx.room:room-compiler:2.2.6"
+    implementation "androidx.room:room-ktx:2.2.6"
+
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
+    implementation 'com.google.dagger:hilt-android:2.28-alpha'
+    // When using Kotlin.
+    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+
+    //Gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation('com.squareup.okhttp3:logging-interceptor:4.9.0')
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Declare the dependency for the Firebase SDK for Google Analytics
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

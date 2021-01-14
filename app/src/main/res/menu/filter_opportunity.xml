@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuAll"
+        android:title="@string/menu_all" />
+    <item
+        android:id="@+id/menuFhaz"
+        android:title="@string/menu_fhaz" />
+    <item
+        android:id="@+id/menuRhaz"
+        android:title="@string/menu_rhaz" />
+    <item
+        android:id="@+id/menuNavCam"
+        android:title="@string/menu_navcam" />
+    <item
+        android:id="@+id/menuPanCam"
+        android:title="@string/menu_pancam" />
+    <item
+        android:id="@+id/menuMinites"
+        android:title="@string/menu_minites" />
+</menu>

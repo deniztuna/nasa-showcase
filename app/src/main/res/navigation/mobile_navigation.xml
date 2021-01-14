@@ -3,23 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_curiosity">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.appcent.nasashowcase.ui.home.CuriosityFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_curiosity"
+        android:name="com.appcent.nasashowcase.ui.curiosity.CuriosityFragment"
+        android:label="@string/title_curiosity"
+        tools:layout="@layout/fragment_curiosity">
+
+        <action
+            android:id="@+id/actionCuriosityFragmentToDetailFragment"
+            app:destination="@id/navigation_detail"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.appcent.nasashowcase.ui.dashboard.OpportunityFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_opportunity"
+        android:name="com.appcent.nasashowcase.ui.opportunity.OpportunityFragment"
+        android:label="@string/title_opportunity"
+        tools:layout="@layout/fragment_opportunity">
+
+        <action
+            android:id="@+id/actionOpportunityFragmentToDetailFragment"
+            app:destination="@id/navigation_detail"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.appcent.nasashowcase.ui.notifications.SpiritFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_spirit"
+        android:name="com.appcent.nasashowcase.ui.spirit.SpiritFragment"
+        android:label="@string/title_spirit"
+        tools:layout="@layout/fragment_spirit">
+
+        <action
+            android:id="@+id/actionSpiritFragmentToDetailFragment"
+            app:destination="@id/navigation_detail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.appcent.nasashowcase.ui.detail.DetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="nasaPhotoUrl"
+            app:argType="string" />
+
+        <argument
+            android:name="photoTakenDate"
+            app:argType="string" />
+
+        <argument
+            android:name="roverName"
+            app:argType="string" />
+
+        <argument
+            android:name="roverCamera"
+            app:argType="string" />
+
+        <argument
+            android:name="roverStatus"
+            app:argType="string" />
+
+        <argument
+            android:name="roverLaunchDate"
+            app:argType="string" />
+
+        <argument
+            android:name="roverLandingDate"
+            app:argType="string" />
+    </fragment>
 </navigation>

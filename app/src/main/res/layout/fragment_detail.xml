@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="nasaPhotoUrl"
+            type="String" />
+
+        <variable
+            name="photoTakenDate"
+            type="String" />
+
+        <variable
+            name="roverName"
+            type="String" />
+
+        <variable
+            name="roverCamera"
+            type="String" />
+
+        <variable
+            name="roverStatus"
+            type="String" />
+
+        <variable
+            name="roverLaunchDate"
+            type="String" />
+
+        <variable
+            name="roverLandingDate"
+            type="String" />
+        <import type="android.text.TextUtils"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:transitionName="@string/action_card_transition">
+
+        <ImageView
+            android:id="@+id/imageViewRoverPhoto"
+            android:layout_width="0dp"
+            android:layout_height="320dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDateOfPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewRoverPhoto"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_photo_taken_date(photoTakenDate)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDateOfPhoto"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_rover_name(roverName)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRoverCamera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRover"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_rover_camera_name(roverCamera)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRoverStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRoverCamera"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_rover_status(roverStatus)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRoverStartMission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRoverStatus"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_rover_launch_date(roverLaunchDate)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRoverFinishMission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRoverStartMission"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="@{@string/detail_rover_landing_date(roverLandingDate)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770868232825",
+    "project_id": "nasa-showcase",
+    "storage_bucket": "nasa-showcase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770868232825:android:78822d05597ddb9dd1caa8",
+        "android_client_info": {
+          "package_name": "com.appcent.nasashowcase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770868232825-89di93l6dk1i9pbksjpg4ekj17b1tg70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwamJk8bEh3HfKZ5QhlxCCb65NCOolrkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770868232825-89di93l6dk1i9pbksjpg4ekj17b1tg70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

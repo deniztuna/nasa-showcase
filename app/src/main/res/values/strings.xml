@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">NasaShowcase</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_curiosity">Curiosity</string>
+    <string name="title_opportunity">Opportunity</string>
+    <string name="title_spirit">Spirit</string>
+
+    <string name="menu_filter">Filter</string>
+    <string name="menu_all">ALL</string>
+    <string name="menu_fhaz">FHAZ</string>
+    <string name="menu_rhaz">RHAZ</string>
+    <string name="menu_mast">MAST</string>
+    <string name="menu_chemcam">CHEMCAM</string>
+    <string name="menu_mahli">MAHLI</string>
+    <string name="menu_mardi">MARDI</string>
+    <string name="menu_navcam">NAVCAM</string>
+    <string name="menu_pancam">PANCAM</string>
+    <string name="menu_minites">MINITES</string>
+    <string name="menu_delete_task">Delete task</string>
+    <string name="empty_data_message">There are no photo for this camera / rover.</string>
+    <string name="title_detail">Detail</string>
+
+    <string name="action_card_transition_with_position">action_cardtransition%1$s</string>
+    <string name="action_card_transition">action_card_transition</string>
+
+    <string name="detail_photo_taken_date">Photo Taken Date: %1$s</string>
+    <string name="detail_rover_name">Rover Name: %1$s</string>
+    <string name="detail_rover_camera_name">Rover Camera: %1$s</string>
+    <string name="detail_rover_status">Rover Status: %1$s</string>
+    <string name="detail_rover_launch_date">Rover Mission Launch Date: %1$s</string>
+    <string name="detail_rover_landing_date">Rover Mission Landing Date: %1$s</string>
 </resources>
