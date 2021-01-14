@@ -23,9 +23,6 @@ class NasaRemoteConfigManager {
         firebaseRemoteConfig.setConfigSettingsAsync(configSettings)
         firebaseRemoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
 
-        setSolDayConfig()
-        setApiKeyConfig()
-
         firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 try {
