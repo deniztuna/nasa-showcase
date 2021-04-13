@@ -33,7 +33,10 @@ jobs:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results/junit
-              ~/test-results/lint
+          destination: reports
+      - store_artifacts:
+          path: ~/test-results/lint
+          destination: reports
 
   android-test:
     parameters:
