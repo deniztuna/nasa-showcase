@@ -22,10 +22,18 @@ jobs:
             mkdir -p ~/test-results/junit/
             find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
           when: always
+      - run:
+          name: Save Lint Results
+          command: |
+            mkdir -p ~/test-results/lint
+            find app/build/reports -name "lint*.html" -exec cp {} ~/test-results/lint/ \;
+            find app/build/reports -name "lint*.xml" -exec cp {} ~/test-results/lint/ \;
+          when: always
       - store_test_results:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results/junit
+              ~/test-results/lint
 
   android-test:
     parameters:
