@@ -25,6 +25,7 @@ jobs:
       - run:
           name: Save Lint Results
           command: |
+            ./gradlew lint test
             mkdir -p ~/test-results/lint
             find app/build/reports -name "lint*.html" -exec cp {} ~/test-results/lint/ \;
             find app/build/reports -name "lint*.xml" -exec cp {} ~/test-results/lint/ \;
