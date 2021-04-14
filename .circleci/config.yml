@@ -30,6 +30,9 @@ jobs:
             find app/build/reports -name "lint*.html" -exec cp {} ~/test-results/lint/ \;
             find app/build/reports -name "lint*.xml" -exec cp {} ~/test-results/lint/ \;
           when: always
+      - run:
+          name: Analyze on SonarCloud
+          command: gradle build sonarqube
       - store_test_results:
           path: ~/test-results
       - store_artifacts:
@@ -82,6 +85,7 @@ workflows:
   test-and-build:
     jobs:
       - unit-test
+        context: SonarCloud
       - android-test:
           filters:
             branches:
