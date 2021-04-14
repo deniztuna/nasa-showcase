@@ -85,7 +85,7 @@ workflows:
   test-and-build:
     jobs:
       - unit-test:
-        context: SonarCloud
+          context: SonarCloud
       - android-test:
           filters:
             branches:
